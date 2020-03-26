@@ -130,7 +130,7 @@
 %endif
 
 %define ea_openssl_ver 1.0.2o-2
-%define ea_libcurl_ver 7.59.0-2
+%define ea_libcurl_ver 7.68.0-2
 
 Summary:  PHP scripting language for creating dynamic web sites
 %if %{with_httpd}
@@ -140,7 +140,7 @@ Vendor:   cPanel, Inc.
 Name:     %{?scl_prefix}php
 Version:  5.4.45
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4576 for more details
-%define release_prefix 68
+%define release_prefix 69
 Release: %{release_prefix}%{?dist}.cpanel
 # All files licensed under PHP version 3.01, except
 # Zend is licensed under Zend
@@ -1866,6 +1866,9 @@ fi
 %endif
 
 %changelog
+* Thu Mar 26 2020 Tim Mullin <tim@cpanel.net> - 5.4.45-69
+- EA-8928: Updated the required version for ea-libcurl
+
 * Thu Mar 05 2020 Daniel Muey <dan@cpanel.net> - 5.4.45-68
 - ZC-6270: Fix circular deps like EA-8854
 
