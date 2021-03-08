@@ -140,7 +140,7 @@ Vendor:   cPanel, Inc.
 Name:     %{?scl_prefix}php
 Version:  5.4.45
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4576 for more details
-%define release_prefix 72
+%define release_prefix 73
 Release: %{release_prefix}%{?dist}.cpanel
 # All files licensed under PHP version 3.01, except
 # Zend is licensed under Zend
@@ -150,7 +150,7 @@ Group:    Development/Languages
 URL:      http://www.php.net/
 
 Source0: http://www.php.net/distributions/php-%{version}%{?rcver}.tar.bz2
-Source1: https://www.litespeedtech.com/packages/lsapi/php-litespeed-7.8.tgz
+Source1: https://www.litespeedtech.com/packages/lsapi/php-litespeed-7.9.tgz
 Source2: php.ini
 Source3: macros.php
 Source4: php-fpm.conf
@@ -1868,6 +1868,9 @@ fi
 %endif
 
 %changelog
+* Fri Mar 05 2021 Cory McIntire <cory@cpanel.net> - 5.4.45-73
+- EA-9625: Update litespeed to 7.9
+
 * Wed Oct 28 2020 Tim Mullin <tim@cpanel.net> - 5.4.45-72
 - EA-9390: Fix build with latest ea-brotli (v1.0.9)
 
