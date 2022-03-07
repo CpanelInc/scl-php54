@@ -140,7 +140,7 @@ Vendor:   cPanel, Inc.
 Name:     %{?scl_prefix}php
 Version:  5.4.45
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4576 for more details
-%define release_prefix 75
+%define release_prefix 76
 Release: %{release_prefix}%{?dist}.cpanel
 # All files licensed under PHP version 3.01, except
 # Zend is licensed under Zend
@@ -150,7 +150,7 @@ Group:    Development/Languages
 URL:      http://www.php.net/
 
 Source0: http://www.php.net/distributions/php-%{version}%{?rcver}.tar.bz2
-Source1: https://www.litespeedtech.com/packages/lsapi/php-litespeed-7.9.tgz
+Source1: https://www.litespeedtech.com/packages/lsapi/php-litespeed-8.0.1.tgz
 Source2: php.ini
 Source3: macros.php
 Source4: php-fpm.conf
@@ -1868,6 +1868,9 @@ fi
 %endif
 
 %changelog
+* Wed Mar 02 2022 Travis Holloway <t.holloway@cpanel.net> - 5.4.45-76
+- EA-10532: Update litespeed to 8.0.1
+
 * Tue Dec 28 2021 Dan Muey <dan@cpanel.net> - 5.4.45-75
 - ZC-9589: Update DISABLE_BUILD to match OBS
 
